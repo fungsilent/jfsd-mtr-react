@@ -1,13 +1,10 @@
 {
   "files": {
-    "main.css": "/jsfd-mtr-react/static/css/main.f1449cfe.css",
     "main.js": "/jsfd-mtr-react/static/js/main.9490fa7a.js",
     "index.html": "/jsfd-mtr-react/index.html",
-    "main.f1449cfe.css.map": "/jsfd-mtr-react/static/css/main.f1449cfe.css.map",
     "main.9490fa7a.js.map": "/jsfd-mtr-react/static/js/main.9490fa7a.js.map"
   },
   "entrypoints": [
-    "static/css/main.f1449cfe.css",
     "static/js/main.9490fa7a.js"
   ]
 }
