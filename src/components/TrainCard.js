@@ -1,4 +1,6 @@
-const TrainCard = ({ name, color, dest, time, plat }) => {
+import { getStationName } from '../data'
+
+const TrainCard = ({ lineCode, name, color, dest, time, plat }) => {
     return (
         <div
             className='train-card'
@@ -8,7 +10,7 @@ const TrainCard = ({ name, color, dest, time, plat }) => {
         >
             <p className='name'>{name}</p>
             <p className='destination'>
-                終點站: <span>{dest}</span>
+                終點站: <span>{getStationName(lineCode, dest)}</span>
             </p>
             <p className='time'>
                 下班列車: <span>{time.split(' ')[1].substring(0, 5)}</span>

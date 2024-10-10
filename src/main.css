@@ -108,6 +108,7 @@ p {
     display: flex;
     flex-direction: column;
     gap: 24px;
+    width: 100%;
 }
 .trains-section {
     --color: #c7c7c7;

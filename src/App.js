@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { mtrLines, getStationName } from './data'
+import { mtrLines } from './data'
+import './main.css'
 import Loading from './components/Loading'
 import LineButton from './components/LineButton'
 import TrainsSection from './components/TrainsSection'
@@ -10,8 +11,6 @@ const App = () => {
     const [lastUpdate, setLastUpdate] = useState('')
     const [upDataset, setUpDataset] = useState([])
     const [downDataset, setDownDataset] = useState([])
-
-    console.log('selectedLineCode', upDataset)
 
     const onSelectLine = async lineCode => {
         // fetch data

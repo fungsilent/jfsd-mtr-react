@@ -15,6 +15,7 @@ const TrainsSection = ({ direction, lineCode, dataset }) => {
                 {dataset.map(data => (
                     <TrainCard
                         key={data.name}
+                        lineCode={lineCode}
                         color={mtrLines[lineCode].color}
                         {...data}
                     />
