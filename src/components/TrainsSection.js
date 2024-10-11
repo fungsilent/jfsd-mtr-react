@@ -12,14 +12,18 @@ const TrainsSection = ({ direction, lineCode, dataset }) => {
         <div className='trains-section'>
             <p className='title'>往 {destinations} 方向</p>
             <div className='trains'>
-                {dataset.map(data => (
-                    <TrainCard
-                        key={data.name}
-                        lineCode={lineCode}
-                        color={mtrLines[lineCode].color}
-                        {...data}
-                    />
-                ))}
+                {!!dataset.length ? (
+                    dataset.map(data => (
+                        <TrainCard
+                            key={data.name}
+                            lineCode={lineCode}
+                            color={mtrLines[lineCode].color}
+                            {...data}
+                        />
+                    ))
+                ) : (
+                    <div className='no-trains'>沒有列車</div>
+                )}
             </div>
         </div>
     )

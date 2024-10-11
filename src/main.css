@@ -129,6 +129,33 @@ p {
     flex-wrap: wrap;
     gap: var(--gap);
 }
+
+.trains .no-trains {
+    --color: #D32F2F;
+    padding: 16px 32px;
+    background-color: #fff;
+    border: 1px solid var(--color);
+    border-radius: 4px;
+    color: var(--color);
+}
+.trains .no-trains::before {
+    content: '!';
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    font-weight: 900;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--color);
+    margin-right: 12px;
+}
+.trains .no-trains.back::before {
+    content: '👋🏻';
+    background-color: unset;
+}
+
 .train-card {
     --color: '';
     display: flex;

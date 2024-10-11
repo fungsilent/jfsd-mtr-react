@@ -193,6 +193,5 @@ export const mtrLines = {
 }
 
 export const getStationName = (lineCode, stationCode) => {
-    const matched = mtrLines[lineCode].sta.find(sta => sta.code === stationCode)
-    return matched?.name
+    return mtrLines[lineCode].sta.find(sta => sta.code === stationCode).name
 }
