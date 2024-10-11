@@ -12,7 +12,7 @@ const TrainsSection = ({ direction, lineCode, dataset }) => {
         <div className='trains-section'>
             <p className='title'>往 {destinations} 方向</p>
             <div className='trains'>
-                {!!dataset.length ? (
+                {dataset.length > 0 ? (
                     dataset.map(data => (
                         <TrainCard
                             key={data.name}
