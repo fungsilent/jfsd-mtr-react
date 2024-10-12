@@ -92,10 +92,9 @@ async function getAllData(lineCode) {
     fetchData
         .sort((a, b) => new Date(b.sys_time) - new Date(a.sys_time))
         .forEach(data => {
-            if (!data) return
             directions.forEach(direction => {
                 const key = direction.toUpperCase()
-                if (!!data[key] && data[key]?.[0]) {
+                if (!!data[key]?.[0]) {
                     dataset[direction].push({
                         name: data.name,
                         ...data[key][0],
@@ -116,12 +115,12 @@ async function fetchApiData(line, station) {
         response = await response.json()
         if (response.status === 0) {
             // handle 429 or other not successful
-            console.log('fetch error:', { line, station })
-            return null
+            throw new Error('no data')
         }
         return response.data[`${line}-${station}`]
     } catch (err) {
         // handle 500
+        console.log('fetch error:', { line, station })
         return null
     }
 }
