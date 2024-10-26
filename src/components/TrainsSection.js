@@ -4,9 +4,7 @@ import TrainCard from './TrainCard'
 const TrainsSection = ({ direction, lineCode, dataset }) => {
     if (!lineCode) return null
     const color = mtrLines[lineCode].color
-    const destinations = mtrLines[lineCode][direction]
-        .map(stationCode => getStationName(lineCode, stationCode))
-        .join(' / ')
+    const destinations = mtrLines[lineCode][direction].map(stationCode => getStationName(lineCode, stationCode)).join(' / ')
 
     return (
         <div
