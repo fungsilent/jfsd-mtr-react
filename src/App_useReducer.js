@@ -50,7 +50,7 @@ const App = () => {
 
     const onSelectLine = async lineCode => {
         setLineCode(lineCode)
-        dispatch('LOADING')
+        dispatch({ type: 'LOADING' })
 
         const payload = await getAllData(lineCode)
         if (payload) {
